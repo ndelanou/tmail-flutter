@@ -1,7 +1,7 @@
 import 'package:collection/collection.dart';
 import 'package:core/core.dart';
 import 'package:dartz/dartz.dart';
-import 'package:flutter/material.dart';
+import 'package:flutter/material.dart' hide SearchController;
 import 'package:get/get.dart';
 import 'package:jmap_dart_client/jmap/account_id.dart';
 import 'package:jmap_dart_client/jmap/core/session/session.dart';
@@ -45,7 +45,7 @@ class AdvancedFilterController extends BaseController {
   TextEditingController mailBoxFilterInputController = TextEditingController();
   ContactSuggestionSource _contactSuggestionSource = ContactSuggestionSource.tMailContact;
 
-  final SearchController searchController = Get.find<SearchController>();
+  final searchController = Get.find<SearchController>();
   final MailboxDashBoardController _mailboxDashBoardController = Get.find<MailboxDashBoardController>();
 
   SearchEmailFilter get searchEmailFilter =>
